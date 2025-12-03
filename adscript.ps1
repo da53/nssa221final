@@ -3,7 +3,7 @@
 #
 
 Write-Host "==============================================" -ForegroundColor Cyan
-Write-Host "   Windows Server 2025 - AD Forest Installer  " -ForegroundColor Cyan
+Write-Host "   Windows Server 2025 - AD installer frfr  " -ForegroundColor Cyan
 Write-Host "==============================================" -ForegroundColor Cyan
 
 # 1. Prompt for Domain Names
