@@ -6,6 +6,20 @@ Write-Host "==============================================" -ForegroundColor Cya
 Write-Host "   Windows Server 2025 - AD installer frfr  " -ForegroundColor Cyan
 Write-Host "==============================================" -ForegroundColor Cyan
 
+# --- NEW STEP: Install the AD DS Role First ---
+Write-Host "Checking for Active Directory Domain Services role..." -ForegroundColor Yellow
+$adFeature = Get-WindowsFeature AD-Domain-Services
+
+if ($adFeature.Installed -eq $false) {
+    Write-Host "Role not found. Installing AD Domain Services binaries..." -ForegroundColor Cyan
+    # Install the binaries and management tools
+    Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
+    Write-Host "Role installed successfully." -ForegroundColor Green
+} else {
+    Write-Host "AD Domain Services role is already installed." -ForegroundColor Green
+}
+# ----------------------------------------------
+
 # 1. Prompt for Domain Names
 $DomainName = Read-Host "Please enter the FQDN for the new domain (e.g., esd3997.com)"
 
