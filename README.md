@@ -1,6 +1,6 @@
 # nssa221final
 
-PLEASE COPY THESE TO YOUR OWN REPO AND BE chill lol!!!
+!!!
 i reccomend putting in a public repo so u dont gotta deal w pws and stuff
 
 
@@ -16,3 +16,4 @@ Active Directory (sets up everything except DHCP but thats 3 clicks)
 untested:
 
 everything else (gonna test on monday) 
+
